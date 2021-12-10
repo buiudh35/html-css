@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-classes</title>
+    <style>
+
+        /*  SELETORES PERSONALISADOS
+            #  = id
+            .  = class
+            :  = pseudo-class
+            :: = pseudo-element
+            >  = clildren
+        */
+
+        body {
+            text-align: center;
+        }
+
+        h1 {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+
+        .divbox {
+            height: 200px;
+            width: 200px;
+            background-color: tomato;
+            border: 1px solid black;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .divbox:hover {
+            background-color: cyan;
+        }
+
+        #divtext {
+            font-family: monospace;
+            font-size: 22px;
+            color: green;
+        }
+
+        #divtext:hover {
+            background-color: green;
+            color: yellow;
+            width: 230px;
+            margin: auto;
+        }
+
+        #divtext2 {
+            font-family: -apple-system, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 22px;
+            color: blueviolet;
+        }
+
+        #divtext2 > p {
+            display: none;
+        }
+
+        #divtext2:hover > p {
+            display: block;
+            color: rgb(255, 0, 255);
+            background-color: rgb(109, 38, 145);
+            width: 170px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pseudo-classes</h1>
+    <br>
+    <div class="divbox">01</div>
+    <div class="divbox">02</div>
+    <div class="divbox">03</div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div id="divtext">Passe o mouse aqui!</div>
+    <br>
+    <br>
+    <br>
+    <div id="divtext2">Passe o mouse aqui!
+        <p>Texto escondido.</p>
+    </div>
+
+</body>
+</html>

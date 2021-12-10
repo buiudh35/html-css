@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fonts</title>
+    <style>
+        /* Importando a fonte do Google */
+        @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+        /* Importando a fonte da pasta do projeto */
+        @font-face {
+            font-family: 'Christmas';
+            src: url('Christmas Squad - Personal Use.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'HungryCharlie';
+            src: url('HungryCharlie-Serif.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+            /* Tipos de format()
+            - opentype (otf)
+            - truetype (ttf)
+            - embedded-opentype
+            - truetype-aat (Apple Advanced Typography) */
+
+        body {
+            background-image: linear-gradient(to right, #5F2BB3, #361866);
+
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            font-weight: normal; /* Peso da fonte, fina, normal, grossa... */
+            font-style: normal; /* Estilo da fonte, italico, negrito... */
+
+            /* shorthand font:
+            font-style font-weight font-size font-family */
+            
+            /* font: italic bolder 16px Arial, sans-serif; */        
+        }
+
+        main {
+            background-color: rgba(0, 0, 0, 0.349);
+            width: 870px;
+            height: 450px;
+            padding: 20px 0px 5px 0px; /* superior direito inferior esquerdo */
+            margin: auto;
+            border-radius: 20px;
+        }
+        
+        h1 {
+            font-family: 'Christmas', cursive;
+            font-size: 56px;
+            font-weight: normal;
+            font-style: normal;
+            color:#80ff00;
+            text-align: center;
+            text-shadow:2px 2px 5px #42661F;
+        }
+
+        h2 {
+            font-family: 'Abril Fatface', sans-serif;
+            font-size: 26px;
+            font-weight: normal;
+            font-style: normal;
+            color:#D8FC0D;
+            text-align: left;
+            text-shadow:1px 1px 3px #42661F;
+            width: 800px;
+            margin: auto;            
+        }
+
+        p {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 16px;
+            font-weight: normal;
+            font-style: normal;
+            color:#19D8E6;
+            text-align: justify;
+            text-indent: 10px;
+            width: 800px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Trabalhando com fontes</h1>
+    <main>
+    <h2>Subtítulo</h2>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro laudantium tempora laborum rerum aliquid officiis, deserunt vero necessitatibus voluptates repellat neque similique itaque doloremque? Quibusdam facilis eligendi praesentium nulla tempora. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam eum similique pariatur natus hic obcaecati eaque velit nostrum harum ipsum odit laudantium, repellendus et reprehenderit eius, necessitatibus, assumenda exercitationem! Nam?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est quod, voluptate quae eveniet corporis molestiae iste nam facilis nostrum saepe quisquam nobis, modi facere nesciunt amet, vitae nisi reiciendis ex.</p>
+    <br>
+    <h2 style="font-family: 'HungryCharlie'; color: #E6803C; font-size: 28px;">Subtítulo 2</h2>
+    <p style="font-family: monospace; color: #B5E60E;" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum beatae eveniet ea amet labore tenetur, suscipit numquam enim nam nesciunt reprehenderit facere sapiente cum, consequatur officia, aperiam doloremque quas minima. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero tempora quia eveniet minima voluptatem nisi eos, sit, odio explicabo harum similique impedit quasi blanditiis in mollitia repellat placeat repellendus saepe. Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, voluptates non? A exercitationem at sequi consectetur, explicabo repellat atque in beatae perferendis, harum, nostrum sed magnam? Suscipit error nulla corrupti? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae praesentium consequatur adipisci nobis suscipit. Animi blanditiis accusantium, cumque fugiat dignissimos quasi a ullam laborum at odio tempore autem inventore ipsum.</p>
+    </main>
+</body>
+</html>

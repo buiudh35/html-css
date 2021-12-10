@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalisando Links</title>
+    <style>
+        body {
+            background-color: rgb(194, 193, 255);
+        }
+
+        h1 {
+            font-family: Arial, Helvetica, sans-serif;
+            color: blue;
+            text-align: center;
+            padding: 20px;
+        }
+
+        li {
+            color: white;
+            font-family: sans-serif;
+            font-weight: bold;
+        }
+
+        .google {
+            color:#5F6367;
+            text-decoration: none;
+        }
+
+        .youtube {
+            color: #F20505;
+            text-decoration: none;
+        }
+
+        .facebook {
+            color: #227CF2;
+            text-decoration: none;
+        }
+
+        .instagram {
+            color: #723BBF;
+            text-decoration: none;
+        }
+
+        .google:hover, .youtube:hover, .facebook:hover, .instagram:hover {
+            text-decoration: underline;
+            font-size: 1.1em;
+        }
+
+        .google:active, .youtube:active, .facebook:active, .instagram:active {
+            color: greenyellow;
+            font-weight: bolder;
+        }
+
+        .google::after, .youtube::after, .facebook::after, .instagram::after {
+            content: ' \01F517';
+        }
+
+        .google::before, .youtube::before, .facebook::before, .instagram::before {
+            content: '➥ ';
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Personalisando Links</h1>
+            <ul>
+                <li><a class="google" href="http://google.com/" target="_blank">Google</a></li>
+                <li><a class="youtube" href="http://youtube.com/" target="_blank">YouTube</a></li>
+                <li><a class="facebook" href="http://facebook.com/" target="_blank">Facebook</a></li>
+                <li><a class="instagram" href="http://instragram.com/" target="_blank">Instagram</a></li>
+            </ul>
+    </main>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelos de Caixas</title>
+    <style>
+        main {
+            font-family: Arial, Helvetica, sans-serif;
+            width: 900px;
+            margin: auto;
+            text-align: justify;
+            background-color: whitesmoke; 
+        }
+
+        article {
+            background-color: white;
+            padding: 10px 30px 20px 30px;
+            box-shadow: 1px 1px 10px black;
+            border-radius: 0px 0px 20px 20px;
+            margin: auto;
+        }
+
+        #h1 {
+            box-shadow: none;
+            background-color: black;
+            color: white;
+            height: 50px;
+            font-family: monospace;
+            font-size: 40px;
+            text-align: center;
+            padding: 10px;
+            box-shadow: 1px 1px 10px black; 
+            border-radius: 20px 20px 0px 0px;         
+        }
+
+        .code {
+            font-size: 16px;
+        }
+
+    </style>
+</head>
+<main>
+    <article id="h1">
+       Modelos de Caixas
+    </article>
+    <article>
+        <h2>O que é uma caixa?</h2>
+            <p>De forma simples e objetiva, baseado em um conceito chamado “box model”, a grande maioria dos elementos HTML que temos no nosso site são como caixas. Elas são containers que armazenam conteúdos ou até mesmo outras caixas.</p>
+        <h2>Anatomia de uma caixa</h2>
+            <p>Vamos analisar como uma caixa vai ser apresentada por todos os navegadores. Olhe atentamente o diagrama a seguir, que é exatamente o já citado modelo de caixa:</p>
+            <center><img src="box.png"></center>
+
+        <h2>Caixa do tipo block-level</h2>
+            <p>
+                Um elemento dito block-level sempre vai se iniciar em uma nova linha e vai ocupar a
+                largura total do elemento onde ele está contido. Se não estiver contido em nenhuma
+                outra caixa, ele vai ocupar 100% da largura do <code class="code">&#60;body&#62;</code>.
+                O elemento block-level mais conhecido é o <code class="code">&#60;div&#62;</code> e suas variações semânticas
+                modernas da HTML5, como <code class="code">&#60;main&#62;, &#60;section&#62;, &#60;aside&#62;,</code> etc.
+            </p>
+            <p>Na lista a seguir, coloquei alguns elementos HTML que são block-level:</p>
+                <code>
+                    <p class="code">
+                        &#60;address> &#60;article&#62; &#60;aside&#62; &#60;blockquote&#62; &#60;canvas&#62; &#60;dd&#62;
+                        &#60;div&#62; &#60;dl&#62; &#60;dt&#62; &#60;fieldset&#62; &#60;figcaption&#62; &#60;figure&#62;
+                        &#60;footer&#62; &#60;form&#62; &#60;h1&#62; - &#60;h6&#62; &#60;header&#62; &#60;hr&#62; &#60;li&#62;
+                        &#60;main&#62; &#60;nav&#62; &#60;noscript&#62; &#60;ol&#62; &#60;p&#62; &#60;pre&#62;
+                        &#60;section&#62; &#60;table&#62; &#60;tfoot&#62; &#60;ul&#62; &#60;video&#62;
+                    </p>
+                </code>
+
+        <h2>Caixa do tipo inline-level</h2>
+            <p>
+                Um elemento do tipo inline-level não vai começar em uma nova linha, e sim no ponto
+                exato onde foram definidos. E a largura dele vai ocupar apenas o tamanho relativo ao
+                seu conteúdo.
+            </p>
+            <p>Abaixo, listei alguns elementos inline-level usados pela HTML:</p>
+            <code>
+                <p class="code">&#60;a&#62; &#60;abbr&#62; &#60;acronym&#62; &#60;b&#62; &#60;bdo&#62; &#60;br&#62;
+                    &#60;button&#62; &#60;cite&#62; &#60;code&#62; <dfn> &#60;em&#62; &#60;i&#62;
+                    &#60;img&#62; &#60;input&#62; &#60;kbd&#62; &#60;label&#62; &#60;map&#62; &#60;object&#62;
+                    &#60;output&#62; &#60;q&#62; &#60;samp&#62; &#60;script&#62; &#60;select&#62; &#60;small&#62;
+                    &#60;span&#62; &#60;strong&#62; &#60;sub&#62; &#60;textarea&#62; &#60;tt&#62; &#60;var&#62;</p>
+            </code>
+        <h2>Grouping Tags e Semantic Tags</h2>
+            <p>
+                A linguagem HTML padrão tinha apenas duas tags de agrupamento genérico: a <code class="code">&#60;div&#62;</code>
+                e a <code class="code">&#60;span&#62;</code>. A diferença básica entre elas é que a primeira é um elemento agrupador
+                do tipo block-level e o segundo é inline-level. No mais, eles agem exatamente da
+                mesma maneira, servindo para juntar vários outros elementos HTML.
+            </p>
+            <p>
+                Com o surgimento da HTML5, surgiram as tags semânticas de agrupamento. Isso não
+                significa que as <code class="code">&#60;div&#62;</code> e <code class="code">&#60;span&#62;</code> (agora chamadas de não-semânticas) deixaram de
+                existir ou ficaram obsoletas, mas seu uso agora faz menos sentido, pois temos tags
+                para dividir as partes do nosso documento HTML.
+            </p>
+            <p>
+                Vamos compreender a partir de agora os principais agregadores semânticos da
+                HTML5.
+            </p>
+            <h3>Header</h3>
+            <p>
+                Cria áreas relativas a cabeçalhos. Pode ser o cabeçalho principal de um site ou até
+                mesmo o cabeçalho de uma seção ou artigo. Normalmente inclui títulos <code class="code">&#60;h1&#62;</code> - <code class="code">&#60;h6&#62;</code>
+                e subtítulos. Podem também conter menus de navegação.
+            </p>
+            <h3>Nav</h3>
+            <p>
+                Define uma área que possui os links de navegação pela
+                estrutura de páginas que vão compor o website. Um
+                <code class="code">&#60;nav&#62;</code> pode estar dentro de um <code class="code">&#60;header&#62;</code>.
+            </p>
+            <h3>Main</h3> 
+            <p>
+                É um agrupador usado para delimitar o conteúdo
+                principal do nosso site. Normalmente concentra as
+                seções, artigos e conteúdos periféricos.
+            </p>
+            <h3>Section</h3>
+            <p>
+                Cria seções para sua página. Ela pode conter o conteúdo diretamente no seu corpo ou
+                dividir os conteúdos em artigos com conteúdos específicos. Segundo a documentação
+                oficial da W3C, “uma seção é um agrupamento temático de conteúdos, tipicamente
+                com um cabeçalho”.
+            </p>
+            <h3>Article</h3>
+            <p>
+                Um artigo é um elemento que vai conter um conteúdo que pode ser lido de forma
+                independente e dizem respeito a um mesmo assunto. Podemos usar um <code class="code">&#60;article&#62;</code>
+                para delimitar um post de blog ou fórum, uma notícia, etc.
+            </p>
+            <h3>Aside</h3>
+            <p>
+                Delimita um conteúdo periférico e complementar ao conteúdo principal de um artigo
+                ou seção. Normalmente um conteúdo <code class="code">&#60;aside&#62;</code> está posicionado ao lado de um
+                determinado texto ou até mesmo no meio dele, exatamente como fizemos no bloco de
+                texto apresentado anteriormente, falando sobre “MÚLTIPLOS NÍVEIS”.
+            </p>
+            <h3>Footer</h3>
+            <p>
+                Cria um rodapé para o site inteiro, seção ou artigo. É um conteúdo que não faz parte
+                diretamente do conteúdo nem é um conteúdo periférico (o que caracterizaria um
+                <code class="code">&#60;aside&#62;</code>), mas possui informações sobre autoria do conteúdo, links adicionais, mapa
+                do site, documentos relacionados.
+            </p>
+            <br>
+            <p>
+                A seguir, vou criar uma proposta de estrutura para um projeto de site. Não tome ela
+                como a única possibilidade de criar o posicionamento de elementos de agrupamento
+                semântico.
+            </p>  
+            <center><img src="estrutura.png"></center>
+    </article> 
+    </main>
+</html>
