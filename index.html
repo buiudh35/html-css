@@ -124,7 +124,7 @@
     <hr> <!-- linha horizontal -->
 
     <h1><ins>Adicionar imagens: (img) </ins></h1>
-    <img src="/img/html.png" alt="Logo HTML5"> <!-- Tag img usando o arquivo na pasta do projeto -->
+    <img src="midia/img/html.png" alt="Logo HTML5"> <!-- Tag img usando o arquivo na pasta do projeto -->
     <img src="https://miro.medium.com/max/365/1*f9t1eeISadHhjK5QYejJBg.png" height="292px" alt="Logo CSS3"> <!-- Tag img usando o arquivo por link -->
     
 
@@ -199,8 +199,8 @@
     <h2>Links Internos (a)</h2>
     <p>Acessar a <a href="pag02.html">segunda página.</a></p> <!-- 'a' usada para colocar links -->
     <h2>Links de Download [(a)+download+application]</h2>
-    <p><a href="lvr/01.pdf" download="01.pdf" type="application/pdf">Baixar Livro 01 em PDF.</a></p>
-    <p><a href="lvr/01.zip" download="01.zip" type="application/zip">Baixar livro 01 em ZIP.</a></p>
+    <p><a href="midia/lvr/01.pdf" download="01.pdf" type="application/pdf">Baixar Livro 01 em PDF.</a></p>
+    <p><a href="midia/lvr/01.zip" download="01.zip" type="application/zip">Baixar livro 01 em ZIP.</a></p>
 
     <br><br> <!-- Quebra de linha -->
     <hr> <!-- linha horizontal -->
@@ -208,9 +208,9 @@
     <h1><ins>Imagens dinâmicas: [(picture)+source media type]</ins></h1> <!-- Imagens que se adaptam ao tamanho da tela -->
     <p>Testar em Dispositivos diferentes.</p>
     <picture> <!-- Abrir essa tag antes da imagem -->
-        <source media="(max-width:750px)" srcset="img/imgp.png" type="image/png">
-        <source media="(max-width:1050px)" srcset="img/imgm.png" type="image/png"> <!-- Tag responsavel pela mudança dos tamanhos -->
-        <img src="img/imgg.png" alt="Imagem Grande">
+        <source media="(max-width:750px)" srcset="midia/img/imgp.png" type="image/png">
+        <source media="(max-width:1050px)" srcset="midia/img/imgm.png" type="image/png"> <!-- Tag responsavel pela mudança dos tamanhos -->
+        <img src="midia/img/imgg.png" alt="Imagem Grande">
     </picture>
 
     <br><br> <!-- Quebra de linha -->
@@ -218,13 +218,13 @@
 
     <h1><ins>Reproduzindo Áudio</ins></h1>
     <h2>Forma 01: (audio)</h2> 
-    <audio src="aud/True Messiah.mp3" controls></audio>
+    <audio src="midia/aud/True Messiah.mp3" controls></audio>
     <h2>Forma 02: (audio)+(source)</h2>
     <p>Caso o navegador não seja compativel com o formato do áudio ele reproduzira em outro formato que esteja listado.</p>
     <audio preload="metadata" controls loop>
-        <source src="aud/True Messiah.mp3" type="audio/mpeg"> <!-- Primeiro o navegador tentara reproduzir em mp3 -->
-        <source src="aud/True Messiah.ogg" type="audio/ogg"> <!-- Caso o navegador não consiga reproduzir o arquivo em mp3 ele reproduzira em ogg -->
-        <source src="aud/True Messiah.wav" type="audio/wav"> <!-- Se os antecessores não forem reproduzidos ele tentara reproduzir em wav -->
+        <source src="midia/aud/True Messiah.mp3" type="audio/mpeg"> <!-- Primeiro o navegador tentara reproduzir em mp3 -->
+        <source src="midia/aud/True Messiah.ogg" type="audio/ogg"> <!-- Caso o navegador não consiga reproduzir o arquivo em mp3 ele reproduzira em ogg -->
+        <source src="midia/aud/True Messiah.wav" type="audio/wav"> <!-- Se os antecessores não forem reproduzidos ele tentara reproduzir em wav -->
         <p>Seu navegador não suporta reproduzir esse áudio.</p>
     </audio>
 
@@ -233,12 +233,12 @@
 
     <h1><ins>Inserindo vídeos:</ins></h1>
     <h2>Forma 01: (video)</h2>
-    <video src="vdo/vdo1.mp4" width="560" controls></video> <!-- "video" para adicionar o vídeo, controls para aparecer os controles -->
+    <video src="midia/vdo/vdo1.mp4" width="560" controls></video> <!-- "video" para adicionar o vídeo, controls para aparecer os controles -->
     <h2>Forma 02: (video)+(source)</h2>
     <p>Caso o navegador não seja compativel com o formato do video ele reproduzira em outro formato que esteja listado.</p>
     <video width="560" controls poster="img/IMG_0602.jpg"> <!-- 'poster' para uma tumbnaill-->
-        <source src="vdo/vdo1.mp4" type="video/mp4"><!-- Primeiro o navegador tentara reproduzir em mp4 -->
-        <source src="vdo/vdo1.webm" type="video/webm"><!-- Caso o navegador não consiga reproduzir o arquivo em mp4 ele reproduzira em webm -->
+        <source src="midia/vdo/vdo1.mp4" type="video/mp4"><!-- Primeiro o navegador tentara reproduzir em mp4 -->
+        <source src="midia/vdo/vdo1.webm" type="video/webm"><!-- Caso o navegador não consiga reproduzir o arquivo em mp4 ele reproduzira em webm -->
         <p>Seu navegador não suporta reproduzir esse vídeo.</p>
     </video>
     <h2>Forma 03: [incorporar]</h2>
