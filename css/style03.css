@@ -23,3 +23,21 @@ h1 {
 h2 {
     color: #A5B830;
 }
+
+footer {
+    margin: auto;
+}
+
+footer p {
+    width: 150px;
+    text-align: center;
+    padding: 5px 0px;
+    margin: 20px auto;
+    background-color: white;
+}
+
+footer a {
+    text-decoration: none;
+    color: #A5B830;
+    font-weight: bold;
+}
