@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela Responsiva</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin: auto;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        div#table {
+            overflow-x: auto;
+        }
+
+        #menu {
+            padding: 25px;
+        }
+
+        #menu p {
+            margin: auto;
+            padding: 30px;
+            text-align: center;
+        }
+
+        #menu a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            background-color: white;
+            padding: 8px;
+            border: 3px solid black;
+        }
+
+        #menu a:hover {
+            background-color: darkgray;
+            border: 5px solid dimgray;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="table">
+        <table>
+            <caption>Venda do Produto</caption>
+            <thead>
+                <th>Prod</th>
+                <th>Jan</th>
+                <th>Fev</th>
+                <th>Mar</th>
+                <th>Abr</th>
+                <th>Mai</th>
+                <th>Jun</th>
+                <th>Jul</th>
+                <th>Ago</th>
+                <th>Set</th>
+                <th>Out</th>
+                <th>Nov</th>
+                <th>Dez</th>
+            </thead>
+            <tbody>
+                <td>Xilofone</td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+                <td>10</td>
+                <td>11</td>
+                <td>12</td>
+            </tbody>
+            <tfoot>
+                <th colspan="12">Total</th>
+                <td>78</td>
+            </tfoot>
+        </table>
+    </div>
+    <div id="menu">
+        <p><a href="../pagtable.html">IR PARA O MENU</a></p>
+    </div>
+</body>
+</html>
