@@ -9,259 +9,251 @@
     <link rel="shortcut icon" href="img/favicon-32x32.png" type="image/x-icon"> <!-- Favcon da página -->
     <title>Codigos HTML</title> <!-- Titulo do site. -->
     <style>
+        :root {
+            --cor01 : #fbff8165;
+            --cor02 : #FFC53A;
+            --cor03 : #B26700;
+            --cor04 : #161032;
+        }
+
         body {
-            background-color: rgb(186, 207, 255);
+            min-width: 400px;
+            max-width: 800px;
+            background-color: var(--cor01);
             text-align: center;
             list-style-position: inside;
+            margin: 0px auto;
+            padding: 0px 0px 50px 0px;
         }
+
+        main {
+            background-color: white;
+            border-radius: 30px;
+            box-shadow: 3px 2px 5px rgba(0, 0, 0, 0.300);
+            padding: 20px 40px 40px 40px;
+        }
+
         h1 {
             font-family: Arial;
-            background-color: rgb(39, 57, 255);
-            color: white;
+            background-color: var(--cor03);
+            color: var(--cor02);
+            border-radius: 30px;
         }
         p, h2, h3, h4, h5, h6 {
             font-family: Arial;
+            color: var(--cor05);
         }
+
+        button {
+            padding: 10px;
+            border-radius: 15px;
+        }
+
+        button > a {
+            text-decoration: none;
+            font-weight: bold;
+            color: var(--cor03);
+        }
+
     </style>
 </head>
-
-<body> <!-- Corpo do site. -->
-
-    <h1><ins>Títulos:</ins></h1>
-
-    <h1 style="background-color: rgb(186, 207, 255); color:black;">Título Principal (h1)</h1> <!-- 'h1' Título Principal --> 
-    <h2>Subtítulo (h2)</h2> <!-- 'h2' subtítulo -->
-    <h3>Sub-subtítulo (h3)</h3> <!-- 'h3' sub-subtítulo -->
-    <h4>Sub-sub-subtítulo (h4)</h4> <!-- 'h4' ...sub-subtítulo -->
-    <h5>Sub-sub-sub-subtítulo (h5)</h5> <!-- 'h5' ...sub-subtítulo -->
-    <h6>Sub-sub-sub-sub-subtítulo (h6)</h6> <!-- 'h6' ...sub-subtítulo -->
-
-    <br><!-- 'br' Quebra de linha -->
-    <hr> <!-- 'hr' linha horizontal -->
-
-    <h1><ins>Parágrafo:</ins></h1>
-    <p>Esse é um parágrafo (p)</p> <!-- 'p' Parágrafo -->
-
-    <br><!-- 'br' Quebra de linha -->
-    <hr> <!-- 'hr' linha horizontal -->
-
-    <h1><ins>Principais formatações:</ins></h1>
-    <h2>Negrito / Destaque</h2>
-    <p>Nesta frase, temos um <b>termo em negrito</b> usando a tag (b) (não semantica)</p> <!-- 'b' Negrito -->
-    <p>Nesta frase, temos um <strong>termo em destaque</strong> usando a tag (strong) (semantica)</p> <!-- 'strong' Destaque -->
-    <h2>Itálico / Ênfase</h2>
-    <p>Nesta frase, temos um <i>termo em itálico</i> usando a tag (i) (não semantica).</p> <!-- 'i' Itálico -->
-    <p>Nesta frase, temos um <em>termo em ênfase</em> usando a tag (em) (semantica).</p> <!-- 'em' Ênfase -->
-    <h2>Texto Marcado</h2>
-    <p>Podemos criar também <mark>um texto marcado</mark> usando a tag (mark).</p> <!-- 'mark' Texto Marcado -->
-    <p>Podemos também <mark style="background-color: chartreuse;">mudar a cor do marcador.</mark> com as folhas de estilo</p> <!-- 'mark' Texto Marcado com style para mudar a cor -->
-    <h2>Texto grande e pequeno</h2>
-    <p>Estamos criando um <big>texto grande</big>(big) e um <small>texto pequeno</small>(small).</p> <!--Texto grande e texto pequeno -->
-    <h2>Texto deletado</h2>
-    <p>Podemos marcar <del>um texto como excluído</del>(del) para indicar que ele deve ser lido, mas não considerado.</p> <!--Texto deletado -->
-    <h2>Texto inserido</h2>
-    <p>Podemos marcar <ins>um texto como inserido</ins>(ins) para dar uma ênfase e indicar que ele foi adicionado depois.</p> <!--Texto inserido -->
-    <h2>Texto sobrescrito</h2>
-    <p>Para inserir coisas do tipo x<sup>20</sup>+3 (sup)</p> <!--Texto sobrescrito -->
-    <h2>Texto subscrito</h2>
-    <p>Para inserir coisas do tipo H<sub>2</sub>O (sub)</p> <!--Texto subscrito -->
-
-    <br> <!-- Quebra de linha -->
-    <hr> <!-- linha horizontal -->
-
-    <h1><ins>Outras Formatações</ins></h1>
-    <h2>Código-fonte / Pré-formatação</h2>
-    <p>O comando <code>document.getElemenentById('teste')</code>(code) é escrito em linguagem JavaScript.</p> <!-- 'code' usada para codigos, melhor visualização -->
-    <pre> <!-- pré-formatação do texto -->
-    <code> <!-- 'code' usada para codigos, melhor visualização -->
-        num = int(input('Digite um número'))
-        if num % 2 == 0:
-            print(f'O número {num} é PAR')
-        else:
-            print(f'O número {num} é ÍMPAR')
-        print('Fim do programa')
-    </code>
-        (tag usada para pré-formatação (pre))
-    </pre>
-    <h2>Citações simples</h2>
-    <p>Como diria o pai de um amigo: <q>o computador é um burro muito rápido</q>(q)</p> <!-- 'q' da sentido de citação -->
-    <h2>Citações completas</h2>
-    <p>Frase de Bill Gates:</p>
-    <blockquote cite="https://exame.com/carreira/10-frases-de-bill-gates-para-inspirar-sua-carreira/"> <!-- Mecanismo de busca -->
-        "É genial festejar o sucesso, mas é mais importante aprender com as lições do fracasso."
-    </blockquote> (blockquote) <!-- citação completa -->
-    <h2>Abreviações</h2>
-    <p>Estou estudando <abbr title="HyperText Markup Language">HTML</abbr> e <abbr title="Cascading Style Sheets">CSS</abbr>. (abbr) </p> <!-- 'abbr' abreviações -->
-    <h2>Texto invertido</h2>
-    <p><bdo dir="rtl">Estou aprendendo a criar coisas em HTML.</bdo> (bdo) </p> <!-- 'bdo' texto invertido -->
-
-    <br> <!-- Quebra de linha -->
-    <hr> <!-- linha horizontal -->
-
-    <h1><ins>Simbolos e emoji:</ins></h1>
-
-    <h2>Símbolos especiais:</h2>
-    &lt;
-    &gt;
-    &reg;
-    &copy;
-    &trade;
-    &euro;
-    &pound;
-    &yen;
-    &cent;
-    &Delta;
-    &uarr;
-    (& + nome do simbolo)
-
-    <h2>Emoji:</h2>
-    &#x1F600; <!-- O emoji sempre deve começar com &#x -->
-    &#x1F929;
-    &#x1F9D1; ...
-    (&#x + codigo do emoji)
-
-    <br><br> <!-- Quebra de linha -->
-    <hr> <!-- linha horizontal -->
-
-    <h1><ins>Adicionar imagens: (img) </ins></h1>
-    <img src="midia/img/html.png" alt="Logo HTML5"> <!-- Tag img usando o arquivo na pasta do projeto -->
-    <img src="https://miro.medium.com/max/365/1*f9t1eeISadHhjK5QYejJBg.png" height="292px" alt="Logo CSS3"> <!-- Tag img usando o arquivo por link -->
-    
-
-    <br><br> <!-- Quebra de linha -->
-    <hr> <!-- linha horizontal -->
-
-    <h1><ins>Listas</ins></h1>
-    <h2>Listas Ordenadas: (ol)</h2>
-    <ol type="1" start="10"> <!-- 'ol' lista ordenada -->
-        <li>Acordar (li) </li> <!-- 'li' item da lista -->
-        <li>Escovar os dentes (li) </li> <!-- 'li' item da lista -->
-        <li>Tomar café (li) </li> <!-- 'li' item da lista -->
-    </ol>
-    <h2>Listas não Ordenadas: (ul)</h2>
-    <ul type="square"> <!-- 'ul' lista não ordenada / 'type' disc, circle, square -->
-        <li>Pão (li) </li> <!-- 'li' item da lista -->
-        <li>Leite (li) </li> <!-- 'li' item da lista -->
-        <li>Nescau (li) </li> <!-- 'li' item da lista -->
-    </ul>
-    <h2>Listas mistas</h2>
-    <h3>Ex. 1: Linguagens de Programação</h3>
-    <ol><!-- 'ol' lista ordenada -->
-        <li>Antigas</li> <!-- 'li' item da lista -->
-        <ol type="I"> <!-- 'ol' lista ordenada -->
-            <li>Clipper</li> <!-- 'li' item da lista -->
-            <li>Visual Basic</li> <!-- 'li' item da lista -->
-            <li>Fortran</li> <!-- 'li' item da lista -->
-            <li>Delphi</li> <!-- 'li' item da lista -->
+<body><!-- Corpo do site. -->
+    <main>
+        <h1><ins>Títulos:</ins></h1>
+        <h1 style="background-color: white; color:black;">Título Principal (h1)</h1> <!-- 'h1' Título Principal -->
+        <h2>Subtítulo (h2)</h2> <!-- 'h2' subtítulo -->
+        <h3>Sub-subtítulo (h3)</h3> <!-- 'h3' sub-subtítulo -->
+        <h4>Sub-sub-subtítulo (h4)</h4> <!-- 'h4' ...sub-subtítulo -->
+        <h5>Sub-sub-sub-subtítulo (h5)</h5> <!-- 'h5' ...sub-subtítulo -->
+        <h6>Sub-sub-sub-sub-subtítulo (h6)</h6> <!-- 'h6' ...sub-subtítulo -->
+        <br><!-- 'br' Quebra de linha -->
+        <h1><ins>Parágrafo:</ins></h1>
+        <p>Esse é um parágrafo (p)</p> <!-- 'p' Parágrafo -->
+        <br><!-- 'br' Quebra de linha -->
+        <h1><ins>Principais formatações:</ins></h1>
+        <h2>Negrito / Destaque</h2>
+        <p>Nesta frase, temos um <b>termo em negrito</b> usando a tag (b) (não semantica)</p> <!-- 'b' Negrito -->
+        <p>Nesta frase, temos um <strong>termo em destaque</strong> usando a tag (strong) (semantica)</p> <!-- 'strong' Destaque -->
+        <h2>Itálico / Ênfase</h2>
+        <p>Nesta frase, temos um <i>termo em itálico</i> usando a tag (i) (não semantica).</p> <!-- 'i' Itálico -->
+        <p>Nesta frase, temos um <em>termo em ênfase</em> usando a tag (em) (semantica).</p> <!-- 'em' Ênfase -->
+        <h2>Texto Marcado</h2>
+        <p>Podemos criar também <mark>um texto marcado</mark> usando a tag (mark).</p> <!-- 'mark' Texto Marcado -->
+        <p>Podemos também <mark style="background-color: chartreuse;">mudar a cor do marcador.</mark> com as folhas de estilo</p> <!-- 'mark' Texto Marcado com style para mudar a cor -->
+        <h2>Texto grande e pequeno</h2>
+        <p>Estamos criando um <big>texto grande</big>(big) e um <small>texto pequeno</small>(small).</p> <!--Texto grande e texto pequeno -->
+        <h2>Texto deletado</h2>
+        <p>Podemos marcar <del>um texto como excluído</del>(del) para indicar que ele deve ser lido, mas não considerado.</p> <!--Texto deletado -->
+        <h2>Texto inserido</h2>
+        <p>Podemos marcar <ins>um texto como inserido</ins>(ins) para dar uma ênfase e indicar que ele foi adicionado depois.</p> <!--Texto inserido -->
+        <h2>Texto sobrescrito</h2>
+        <p>Para inserir coisas do tipo x<sup>20</sup>+3 (sup)</p> <!--Texto sobrescrito -->
+        <h2>Texto subscrito</h2>
+        <p>Para inserir coisas do tipo H<sub>2</sub>O (sub)</p> <!--Texto subscrito -->
+        <br> <!-- Quebra de linha -->
+        <h1><ins>Outras Formatações</ins></h1>
+        <h2>Código-fonte / Pré-formatação</h2>
+        <p>O comando <code>document.getElemenentById('teste')</code>(code) é escrito em linguagem JavaScript.</p> <!-- 'code' usada para codigos, melhor visualização -->
+        <pre> <!-- pré-formatação do texto -->
+        <code> <!-- 'code' usada para codigos, melhor visualização -->
+            num = int(input('Digite um número'))
+            if num % 2 == 0:
+                print(f'O número {num} é PAR')
+            else:
+                print(f'O número {num} é ÍMPAR')
+            print('Fim do programa')
+        </code>
+            (tag usada para pré-formatação (pre))
+        </pre>
+        <h2>Citações simples</h2>
+        <p>Como diria o pai de um amigo: <q>o computador é um burro muito rápido</q>(q)</p> <!-- 'q' da sentido de citação -->
+        <h2>Citações completas</h2>
+        <p>Frase de Bill Gates:</p>
+        <blockquote cite="https://exame.com/carreira/10-frases-de-bill-gates-para-inspirar-sua-carreira/"> <!-- Mecanismo de busca -->
+            "É genial festejar o sucesso, mas é mais importante aprender com as lições do fracasso."
+        </blockquote> (blockquote) <!-- citação completa -->
+        <h2>Abreviações</h2>
+        <p>Estou estudando <abbr title="HyperText Markup Language">HTML</abbr> e <abbr title="Cascading Style Sheets">CSS</abbr>. (abbr) </p> <!-- 'abbr' abreviações -->
+        <h2>Texto invertido</h2>
+        <p><bdo dir="rtl">Estou aprendendo a criar coisas em HTML.</bdo> (bdo) </p> <!-- 'bdo' texto invertido -->
+        <br> <!-- Quebra de linha -->
+        <h1><ins>Simbolos e emoji:</ins></h1>
+        <h2>Símbolos especiais:</h2>
+        &lt;
+        &gt;
+        &reg;
+        &copy;
+        &trade;
+        &euro;
+        &pound;
+        &yen;
+        &cent;
+        &Delta;
+        &uarr;
+        (& + nome do simbolo)
+        <h2>Emoji:</h2>
+        &#x1F600; <!-- O emoji sempre deve começar com &#x -->
+        &#x1F929;
+        &#x1F9D1; ...
+        (&#x + codigo do emoji)
+        <br><br> <!-- Quebra de linha -->
+        <h1><ins>Adicionar imagens: (img) </ins></h1>
+        <img src="midia/img/html.png" alt="Logo HTML5"> <!-- Tag img usando o arquivo na pasta do projeto -->
+        <img src="https://miro.medium.com/max/365/1*f9t1eeISadHhjK5QYejJBg.png" height="292px" alt="Logo CSS3"> <!-- Tag img usando o arquivo por link -->
+        
+        <br><br> <!-- Quebra de linha -->
+        <h1><ins>Listas</ins></h1>
+        <h2>Listas Ordenadas: (ol)</h2>
+        <ol type="1" start="10"> <!-- 'ol' lista ordenada -->
+            <li>Acordar (li) </li> <!-- 'li' item da lista -->
+            <li>Escovar os dentes (li) </li> <!-- 'li' item da lista -->
+            <li>Tomar café (li) </li> <!-- 'li' item da lista -->
         </ol>
-        <li>Novas</li>
-        <ol type="I" start="5"><!-- 'ol' lista ordenada -->
-            <li>PHP</li> <!-- 'li' item da lista -->
-            <li>Python</li> <!-- 'li' item da lista -->
-            <li>JavaScript</li> <!-- 'li' item da lista -->
-            <li>Kotlin</li> <!-- 'li' item da lista -->
+        <h2>Listas não Ordenadas: (ul)</h2>
+        <ul type="square"> <!-- 'ul' lista não ordenada / 'type' disc, circle, square -->
+            <li>Pão (li) </li> <!-- 'li' item da lista -->
+            <li>Leite (li) </li> <!-- 'li' item da lista -->
+            <li>Nescau (li) </li> <!-- 'li' item da lista -->
+        </ul>
+        <h2>Listas mistas</h2>
+        <h3>Ex. 1: Linguagens de Programação</h3>
+        <ol><!-- 'ol' lista ordenada -->
+            <li>Antigas</li> <!-- 'li' item da lista -->
+            <ol type="I"> <!-- 'ol' lista ordenada -->
+                <li>Clipper</li> <!-- 'li' item da lista -->
+                <li>Visual Basic</li> <!-- 'li' item da lista -->
+                <li>Fortran</li> <!-- 'li' item da lista -->
+                <li>Delphi</li> <!-- 'li' item da lista -->
+            </ol>
+            <li>Novas</li>
+            <ol type="I" start="5"><!-- 'ol' lista ordenada -->
+                <li>PHP</li> <!-- 'li' item da lista -->
+                <li>Python</li> <!-- 'li' item da lista -->
+                <li>JavaScript</li> <!-- 'li' item da lista -->
+                <li>Kotlin</li> <!-- 'li' item da lista -->
+            </ol>
         </ol>
-    </ol>
-    <h3>Ex. 2: Top Games</h3>
-    <ol type="I"><!-- 'ol' lista ordenada -->
-        <li>NES</li> <!-- 'li' item da lista -->
-        <ul type="square"> <!-- 'ul' lista não ordenada / 'type' disc, circle, square -->
-            <li>Mario Bros</li> <!-- 'li' item da lista -->
-            <li>Ninja Gaiden</li> <!-- 'li' item da lista -->
-        </ul>
-        <li>SNES</li> <!-- 'li' item da lista -->
-        <ul type="square"> <!-- 'ul' lista não ordenada / 'type' disc, circle, square -->
-            <li>Mario Bros</li> <!-- 'li' item da lista -->
-            <li>Donkey Kong</li> <!-- 'li' item da lista -->
-        </ul>
-        <li>PlayStation</li> <!-- 'li' item da lista -->
-        <ul type="square"> <!-- 'ul' lista não ordenada / 'type' disc, circle, square -->
-            <li>Final Fantasy</li> <!-- 'li' item da lista -->
-            <li>PES</li> <!-- 'li' item da lista -->
-        </ul>
-    </ol>
-    <h2>Lista de Definições (dl)</h2>
-    <dl> <!-- 'dl' lista de definições -->
-        <dt>HTML (dt)</dt> <!-- titulo da lista -->
-        <dd>Linguagem de marcação para a criação do conteúdo de um site. (dd)</dd> <!-- descrição da lista -->
-        <dt>CSS (dt)</dt> <!-- titulo da lista -->
-        <dd>Linguagem de marcação para a criação do design de um site. (dd)</dd> <!-- descrição da lista -->
-        <dt>JavaScript (dt)</dt> <!-- titulo da lista -->
-        <dd>Linguagem de Programação para a criação de interatividade de um site. (dd)</dd> <!-- descrição da lista -->
-    </dl>
-
-    <br><br> <!-- Quebra de linha -->
-    <hr> <!-- linha horizontal -->
-
-    <h1><ins>Links</ins></h1>
-    <h2>Links Externos (a)</h2>
-    <p>Link para acessar o <a href="https://google.com.br/" target="_blank" rel="external">Google</a></p> <!-- 'a' usada para colocar links -->
-    <h2>Links Internos (a)</h2>
-    <p>Acessar a <a href="pag02.html">segunda página.</a></p> <!-- 'a' usada para colocar links -->
-    <h2>Links de Download [(a)+download+application]</h2>
-    <p><a href="midia/lvr/01.pdf" download="01.pdf" type="application/pdf">Baixar Livro 01 em PDF.</a></p>
-    <p><a href="midia/lvr/01.zip" download="01.zip" type="application/zip">Baixar livro 01 em ZIP.</a></p>
-
-    <br><br> <!-- Quebra de linha -->
-    <hr> <!-- linha horizontal -->
-
-    <h1><ins>Imagens dinâmicas: [(picture)+source media type]</ins></h1> <!-- Imagens que se adaptam ao tamanho da tela -->
-    <p>Testar em Dispositivos diferentes.</p>
-    <picture> <!-- Abrir essa tag antes da imagem -->
-        <source media="(max-width:750px)" srcset="midia/img/imgp.png" type="image/png">
-        <source media="(max-width:1050px)" srcset="midia/img/imgm.png" type="image/png"> <!-- Tag responsavel pela mudança dos tamanhos -->
-        <img src="midia/img/imgg.png" alt="Imagem Grande">
-    </picture>
-
-    <br><br> <!-- Quebra de linha -->
-    <hr> <!-- linha horizontal -->
-
-    <h1><ins>Reproduzindo Áudio</ins></h1>
-    <h2>Forma 01: (audio)</h2> 
-    <audio src="midia/aud/True Messiah.mp3" controls></audio>
-    <h2>Forma 02: (audio)+(source)</h2>
-    <p>Caso o navegador não seja compativel com o formato do áudio ele reproduzira em outro formato que esteja listado.</p>
-    <audio preload="metadata" controls loop>
-        <source src="midia/aud/True Messiah.mp3" type="audio/mpeg"> <!-- Primeiro o navegador tentara reproduzir em mp3 -->
-        <source src="midia/aud/True Messiah.ogg" type="audio/ogg"> <!-- Caso o navegador não consiga reproduzir o arquivo em mp3 ele reproduzira em ogg -->
-        <source src="midia/aud/True Messiah.wav" type="audio/wav"> <!-- Se os antecessores não forem reproduzidos ele tentara reproduzir em wav -->
-        <p>Seu navegador não suporta reproduzir esse áudio.</p>
-    </audio>
-
-    <br><br> <!-- Quebra de linha -->
-    <hr> <!-- linha horizontal -->
-
-    <h1><ins>Inserindo vídeos:</ins></h1>
-    <h2>Forma 01: (video)</h2>
-    <video src="midia/vdo/vdo1.mp4" width="560" controls></video> <!-- "video" para adicionar o vídeo, controls para aparecer os controles -->
-    <h2>Forma 02: (video)+(source)</h2>
-    <p>Caso o navegador não seja compativel com o formato do video ele reproduzira em outro formato que esteja listado.</p>
-    <video width="560" controls poster="img/IMG_0602.jpg"> <!-- 'poster' para uma tumbnaill-->
-        <source src="midia/vdo/vdo1.mp4" type="video/mp4"><!-- Primeiro o navegador tentara reproduzir em mp4 -->
-        <source src="midia/vdo/vdo1.webm" type="video/webm"><!-- Caso o navegador não consiga reproduzir o arquivo em mp4 ele reproduzira em webm -->
-        <p>Seu navegador não suporta reproduzir esse vídeo.</p>
-    </video>
-    <h2>Forma 03: [incorporar]</h2>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/cspynXT7pjg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-    <br><br> <!-- Quebra de linha -->
-    <hr> <!-- linha horizontal -->
-
-    <h1><ins>CSS3</ins></h1>
-    <h2 style="background-color: rgb(186, 207, 255); color: blue;"><a href="pagcss.html" target="_blank">Acessar os estudos.</a></h2>
-
-    <br> <!-- Quebra de linha -->
-    <hr> <!-- linha horizontal -->
-
-    <a href="https://buiudh35.github.io/SiteAndroid/" target="_blank">
-        <h1 style="background-color: rgb(186, 207, 255); color: blue;"><ins>Site feito com os aprendizados até aqui</ins></h1>
-    </a>
-
-    <hr> <!-- linha horizontal -->
-
-    <h1><ins>Tabelas</ins></h1>
-    <h2 style="background-color: rgb(186, 207, 255); color: blue;"><a href="pagtable.html" target="_blank">Acessar os estudos.</a></h2>
-
+        <h3>Ex. 2: Top Games</h3>
+        <ol type="I"><!-- 'ol' lista ordenada -->
+            <li>NES</li> <!-- 'li' item da lista -->
+            <ul type="square"> <!-- 'ul' lista não ordenada / 'type' disc, circle, square -->
+                <li>Mario Bros</li> <!-- 'li' item da lista -->
+                <li>Ninja Gaiden</li> <!-- 'li' item da lista -->
+            </ul>
+            <li>SNES</li> <!-- 'li' item da lista -->
+            <ul type="square"> <!-- 'ul' lista não ordenada / 'type' disc, circle, square -->
+                <li>Mario Bros</li> <!-- 'li' item da lista -->
+                <li>Donkey Kong</li> <!-- 'li' item da lista -->
+            </ul>
+            <li>PlayStation</li> <!-- 'li' item da lista -->
+            <ul type="square"> <!-- 'ul' lista não ordenada / 'type' disc, circle, square -->
+                <li>Final Fantasy</li> <!-- 'li' item da lista -->
+                <li>PES</li> <!-- 'li' item da lista -->
+            </ul>
+        </ol>
+        <h2>Lista de Definições (dl)</h2>
+        <dl> <!-- 'dl' lista de definições -->
+            <dt>HTML (dt)</dt> <!-- titulo da lista -->
+            <dd>Linguagem de marcação para a criação do conteúdo de um site. (dd)</dd> <!-- descrição da lista -->
+            <dt>CSS (dt)</dt> <!-- titulo da lista -->
+            <dd>Linguagem de marcação para a criação do design de um site. (dd)</dd> <!-- descrição da lista -->
+            <dt>JavaScript (dt)</dt> <!-- titulo da lista -->
+            <dd>Linguagem de Programação para a criação de interatividade de um site. (dd)</dd> <!-- descrição da lista -->
+        </dl>
+        <br><br> <!-- Quebra de linha -->
+        <h1><ins>Links</ins></h1>
+        <h2>Links Externos (a)</h2>
+        <p>Link para acessar o <a href="https://google.com.br/" target="_blank" rel="external">Google</a></p> <!-- 'a' usada para colocar links -->
+        <h2>Links Internos (a)</h2>
+        <p>Acessar a <a href="pag02.html">segunda página.</a></p> <!-- 'a' usada para colocar links -->
+        <h2>Links de Download [(a)+download+application]</h2>
+        <p><a href="midia/lvr/01.pdf" download="01.pdf" type="application/pdf">Baixar Livro 01 em PDF.</a></p>
+        <p><a href="midia/lvr/01.zip" download="01.zip" type="application/zip">Baixar livro 01 em ZIP.</a></p>
+        <br><br> <!-- Quebra de linha -->
+        <h1><ins>Imagens dinâmicas: [(picture)+source media type]</ins></h1> <!-- Imagens que se adaptam ao tamanho da tela -->
+        <p>Testar em Dispositivos diferentes.</p>
+        <picture> <!-- Abrir essa tag antes da imagem -->
+            <source media="(max-width:750px)" srcset="midia/img/imgp.png" type="image/png">
+            <source media="(max-width:1050px)" srcset="midia/img/imgm.png" type="image/png"> <!-- Tag responsavel pela mudança dos tamanhos -->
+            <img src="midia/img/imgg.png" alt="Imagem Grande">
+        </picture>
+        <br><br> <!-- Quebra de linha -->
+        <hr> <!-- linha horizontal -->
+        <h1><ins>Reproduzindo Áudio</ins></h1>
+        <h2>Forma 01: (audio)</h2>
+        <audio src="midia/aud/True Messiah.mp3" controls></audio>
+        <h2>Forma 02: (audio)+(source)</h2>
+        <p>Caso o navegador não seja compativel com o formato do áudio ele reproduzira em outro formato que esteja listado.</p>
+        <audio preload="metadata" controls loop>
+            <source src="midia/aud/True Messiah.mp3" type="audio/mpeg"> <!-- Primeiro o navegador tentara reproduzir em mp3 -->
+            <source src="midia/aud/True Messiah.ogg" type="audio/ogg"> <!-- Caso o navegador não consiga reproduzir o arquivo em mp3 ele reproduzira em ogg -->
+            <source src="midia/aud/True Messiah.wav" type="audio/wav"> <!-- Se os antecessores não forem reproduzidos ele tentara reproduzir em wav -->
+            <p>Seu navegador não suporta reproduzir esse áudio.</p>
+        </audio>
+        <br><br> <!-- Quebra de linha -->
+        <h1><ins>Inserindo vídeos:</ins></h1>
+        <h2>Forma 01: (video)</h2>
+        <video src="midia/vdo/vdo1.mp4" width="560" controls></video> <!-- "video" para adicionar o vídeo, controls para aparecer os controles -->
+        <h2>Forma 02: (video)+(source)</h2>
+        <p>Caso o navegador não seja compativel com o formato do video ele reproduzira em outro formato que esteja listado.</p>
+        <video width="560" controls poster="img/IMG_0602.jpg"> <!-- 'poster' para uma tumbnaill-->
+            <source src="midia/vdo/vdo1.mp4" type="video/mp4"><!-- Primeiro o navegador tentara reproduzir em mp4 -->
+            <source src="midia/vdo/vdo1.webm" type="video/webm"><!-- Caso o navegador não consiga reproduzir o arquivo em mp4 ele reproduzira em webm -->
+            <p>Seu navegador não suporta reproduzir esse vídeo.</p>
+        </video>
+        <h2>Forma 03: [incorporar]</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/cspynXT7pjg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <br><br> <!-- Quebra de linha -->
+        <h1><ins>CSS3</ins></h1>
+        <button><a href="pagcss.html" target="_blank">Acessar os estudos.</a></button>
+        <br> <!-- Quebra de linha -->
+        <h1><ins>Site feito com os aprendizados até aqui</ins></h1>
+        <button><a href="https://buiudh35.github.io/SiteAndroid/" target="_blank">Acessar Site</a></button>
+        <br>
+        <h1><ins>Tabelas</ins></h1>
+        <button><a href="pagtable.html" target="_blank">Acessar os estudos.</a></button>
+        <br>
+    </main>
 
 </body>
 </html>
