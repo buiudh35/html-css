@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            padding-bottom: 30px;
+        }
+
+        form {
+            text-align: center;
+        }
+        
+        input::placeholder {
+            text-align: center;
+            font-size: 12px;
+            color: rgba(0, 0, 0, 0.3);
+        }
+
+        p#botao > input {
+            text-align: center;
+            margin: 10px 37px;
+            padding: 5px 10px;
+        }
+
+        input#btreset {
+            background-color: darkred;
+            color: white;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        input#btsubmit {
+            background-color: darkgreen;
+            color: white;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        input {
+            font-size: 16px;
+            border: 2px solid black;
+            border-radius: 5px;
+        }
+
+        label.bold {
+            font-weight: bold;
+        }
+
+    </style>
+    <title>Formulario 02</title>
+</head>
+<body>
+    <h1>Estudo sobre Formulários</h1>
+
+    <form action="cadastro.php" method="post" autocomplete="on">
+        <p>
+            <label for="iusu" class="bold">Usuário:</label>
+            <input type="text" name="usu" id="iusu" required size="15" minlength="5" maxlength="10" placeholder="Nome de Usuário" autocomplete="username">
+        </p>
+        <p>
+            <label for="isen" class="bold">Senha:</label>
+            <input type="password" name="sen" id="isen" required size="16" minlength="8" maxlength="20" placeholder="Senha" autocomplete="current-password">
+        </p>
+        <p id="botao">
+            <input type="reset" value="Limpar" id="btreset">
+            <input type="submit" value="Enviar" id="btsubmit">
+        </p>
+    </form>
+
+</body>
+</html>

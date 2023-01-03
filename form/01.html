@@ -32,7 +32,7 @@
     <main>
         <h1>Meu Primeiro Formulário</h1>
         <br>
-        <form action="cadastro.php" autocomplete="off">
+        <form action="cadastro.php" method="post" autocomplete="off"> <!-- method GET é o padrão, nele os dados ficam visiveis na URL, usado em ate 3mil caracteres, nao serve para dados. method POST os dados não ficam visiveis na URL, server para mais de 3mil caracteres e para dados-->
             <p><label for="inome">Nome:</label>
                 <input type="text" name="nome" id="inome"></p>
             <p><label for="isobrenome">Sobrenome:</label>
