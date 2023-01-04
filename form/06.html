@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 10px;
+            margin-bottom: 30px;
+        }
+
+        form {
+            width: 500px;
+            margin: auto;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        input {
+            font-size: 16px;
+        }
+
+        legend {
+            font-weight: 400;
+            font-size: 12px;
+            text-align: left;
+        }
+
+    </style>
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Formulário</h1>
+    <form action="cadastro.php" method="post">
+        <p>
+            <label for="icor">Cor:</label>
+            <input type="color" name="cor" id="icor" value="#0000ff">
+        </p>
+        <p>
+            <label for="isat">Satisfação:</label>
+            <input type="range" name="sat" id="isat" min="1" max="10">
+        </p>
+        <p>
+            <label for="iane">Anexar imagem:</label>
+            <input type="file" name="ane" id="iane">
+        </p>
+        <br>
+        <input type="reset" value="LIMPAR">
+        <input type="submit" value="ENVIAR">
+    </form>
+</body>
+</html>
