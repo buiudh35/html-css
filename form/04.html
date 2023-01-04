@@ -4,6 +4,66 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 10px;
+            margin-bottom: 30px;
+        }
+
+        form {
+            width: 300px;
+            margin: auto;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        input::placeholder {
+            text-align: center;
+            font-size: 12px;
+            color: rgba(0, 0, 0, 0.4);
+        }
+
+        p#botao > input {
+            text-align: center;
+            margin-top: 20px;
+            padding: 5px 10px;
+        }
+
+        input#btreset {
+            background-color: rgba(139, 0, 0, 0.3);
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        input#btsubmit {
+            background-color: rgba(0, 100, 0, 0.350);
+            font-weight: bold;
+            border-radius: 5px;
+            margin-left: 141px;
+        }
+
+        input {
+            font-size: 16px;
+            border: 2px solid black;
+            border-radius: 5px;
+        }
+
+        label.bold {
+            font-weight: bold;
+        }
+
+        legend {
+            font-weight: 400;
+            font-size: 12px;
+            text-align: left;
+        }
+
+    </style>
     <title>Estudo de Formulários</title>
 </head>
 <body>
@@ -13,23 +73,23 @@
             <legend>Dados Pessoais</legend>
             <p>
                 <label for="inome">Nome:</label>
-                <input type="text" name="nome" id="inome" required autocomplete="name">
+                <input type="text" name="nome" id="inome" required autocomplete="name" size="20" placeholder="Nome completo">
             </p>
             <p>
                 <label for="iemail">E-mail:</label>
-                <input type="email" name="email" id="iemail" required autocomplete="email">
+                <input type="email" name="email" id="iemail" required autocomplete="email" size="20" placeholder="Seu melhor e-mail">
             </p>
             <p>
                 <label for="itel">Telefone:</label>
-                <input type="tel" name="tel" id="itel" required autocomplete="tel" pattern="^\d{2}\d{4,5}\d{4}$"> 
+                <input type="tel" name="tel" id="itel" required autocomplete="tel" pattern="^\d{2}\d{4,5}\d{4}$" size="18" placeholder="Número com DDD"> 
                 <!-- Toda expresão regular começa com '^' e termina com '$' -->
                 <!-- O Digito é represento por '/d' ou '[0-9]'-->
             </p>
         </fieldset>
         <!--Estudar sobre RegEx-->
         <p>
-            <input type="reset" value="LIMPAR">
-            <input type="submit" value="ENVIAR">
+            <input type="reset" value="LIMPAR" id="btreset">
+            <input type="submit" value="ENVIAR" id="btsubmit">
         </p>
     </form>
 </body>
