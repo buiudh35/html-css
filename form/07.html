@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            margin: auto;
+
+            position: absolute;
+            left: 36%;
+            top: 30%;
+        }
+
+        main {
+            width: 349px;
+            background-color: aquamarine;
+            padding: 1px 20px 20px 20px;
+            border-radius: 20px;
+        }
+    </style>
+    <title>Formulário</title>
+</head>
+<body>
+    <main>
+        <h1>Estudo de Formulários</h1>
+        <form action="cadastro.php" method="post">
+            <div>
+                <label for="iest">Estado:</label>
+                <select name="est" id="iest"> <!--PARA CRIAR UMA LISTA-->
+                    <optgroup label="Sudeste">
+                        <option value="RJ" selected>Rio de Janeiro</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="SP">São Paulo</option>
+                    </optgroup>
+                    <optgroup label="Nordeste">
+                        <option value="MA">Maranhão</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                    </optgroup>
+                </select>
+            </div>
+            <br>
+            <div>
+                <label for="iprof">Profisão:</label>
+                <input type="text" name="prof" id="iprof" list="ltprof">
+                <datalist id="ltprof">
+                    <option>Administrador</option>
+                    <option>Bombeiro</option>
+                    <option>Cozinheiro</option>
+                    <option>Dentista</option>
+                    <option>Eletricista</option>
+                </datalist>
+            </div>
+            <br>
+            <div>
+                <input type="reset" value="LIMPAR">
+                <input type="submit" value="ENVIAR">
+            </div>
+        </form>
+    </main>
+</body>
+</html>
