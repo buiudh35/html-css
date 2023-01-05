@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleex11.css">
+    <title>Formulário</title>
+</head>
+<body>
+    <main>
+        <form action="cadastro.php" method="post">
+                <fieldset>
+                    <legend>Cadastro Geral</legend>
+                    <fieldset>
+                        <legend>Dados pessoais</legend>
+                        <div>
+                            <label for="inome">Nome completo:</label>
+                            <br>
+                            <input type="text" name="nome" id="inome">
+                        </div>
+                        <br>
+                        <div>
+                            <label for="iprof">Profissão:</label>
+                            <br>
+                            <input type="text" name="prof" id="iprof" list="lstprof">
+                        </div>
+                        <datalist id="lstprof"> 
+                            <option>Administrador</option>
+                            <option>Bombeiro</option>
+                            <option>Cozinheiro</option>
+                            <option>Dentista</option>
+                        </datalist>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Localização</legend>
+                        <div>
+                            <label for="irua">Rua:</label>
+                            <br>
+                            <input type="text" name="rua" id="irua">
+                        </div>
+                        <br>
+                        <div>
+                            <label for="icid">Cidade:</label>
+                            <br>
+                            <input type="text" name="cid" id="icid">
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Faixa etária</legend>
+                            <div>
+                                <input type="radio" name="ate20" id="iate20">
+                                <label for="iate20">até 20 anos</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="mais20" id="imas20">
+                                <label for="imas20">mais de 20 anos até 30 anos</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="mais30" id="imas30">
+                                <label for="imas30">mais de 30 anos até 40 anos</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="mais40" id="imas40">
+                                <label for="imas40">mais de 40 anos até 50 anos</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="mais50" id="imas50">
+                                <label for="imas50">mais de 50 anos até 60 anos</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="mais60" id="imais60">
+                                <label for="imais60">mais de 60 anos</label>
+                            </div>
+                    </fieldset>
+                </fieldset>
+        </form>
+    </main>
+</body>
+</html>
