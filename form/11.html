@@ -10,9 +10,9 @@
 <body>
     <main>
         <form action="cadastro.php" method="post">
-                <fieldset>
-                    <legend>Cadastro Geral</legend>
-                    <fieldset>
+                <fieldset id="fieldstyle">
+                    <legend id="title">Cadastro Geral</legend>
+                    <fieldset id="div01">
                         <legend>Dados pessoais</legend>
                         <div>
                             <label for="inome">Nome completo:</label>
@@ -32,7 +32,7 @@
                             <option>Dentista</option>
                         </datalist>
                     </fieldset>
-                    <fieldset>
+                    <fieldset id="div02">
                         <legend>Localização</legend>
                         <div>
                             <label for="irua">Rua:</label>
@@ -46,34 +46,80 @@
                             <input type="text" name="cid" id="icid">
                         </div>
                     </fieldset>
-                    <fieldset>
+                    <fieldset id="field2">
                         <legend>Faixa etária</legend>
-                            <div>
-                                <input type="radio" name="ate20" id="iate20">
-                                <label for="iate20">até 20 anos</label>
+                            <div id="div03">
+                                <div>
+                                    <input type="radio" name="ate20" id="iate20">
+                                    <label for="iate20">até 20 anos</label>
+                                </div>
+                                <div>
+                                    <input type="radio" name="mais20" id="imas20">
+                                    <label for="imas20">mais de 20 anos até 30 anos</label>
+                                </div>
+                                <div>
+                                    <input type="radio" name="mais30" id="imas30">
+                                    <label for="imas30">mais de 30 anos até 40 anos</label>
+                                </div>
                             </div>
-                            <div>
-                                <input type="radio" name="mais20" id="imas20">
-                                <label for="imas20">mais de 20 anos até 30 anos</label>
-                            </div>
-                            <div>
-                                <input type="radio" name="mais30" id="imas30">
-                                <label for="imas30">mais de 30 anos até 40 anos</label>
-                            </div>
-                            <div>
-                                <input type="radio" name="mais40" id="imas40">
-                                <label for="imas40">mais de 40 anos até 50 anos</label>
-                            </div>
-                            <div>
-                                <input type="radio" name="mais50" id="imas50">
-                                <label for="imas50">mais de 50 anos até 60 anos</label>
-                            </div>
-                            <div>
-                                <input type="radio" name="mais60" id="imais60">
-                                <label for="imais60">mais de 60 anos</label>
+                            <div id="div04">
+                                <div>
+                                    <input type="radio" name="mais40" id="imas40">
+                                    <label for="imas40">mais de 40 anos até 50 anos</label>
+                                </div>
+                                <div>
+                                    <input type="radio" name="mais50" id="imas50">
+                                    <label for="imas50">mais de 50 anos até 60 anos</label>
+                                </div>
+                                <div>
+                                    <input type="radio" name="mais60" id="imais60">
+                                    <label for="imais60">mais de 60 anos</label>
+                                </div>
                             </div>
                     </fieldset>
-                </fieldset>
+                    <fieldset id="div05">
+                        <legend>Esportes que pratica</legend>
+                        <div>
+                            <input type="checkbox" name="futc" id="ifutc">
+                            <label for="ifutc">Futebol de campo</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="futs" id="ifuts">
+                            <label for="ifuts">Futebol de salão</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="futso" id="ifutso">
+                            <label for="ifutso">Futebol society</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="volq" id="ivolq">
+                            <label for="ivolq">Vôlei de quadra</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="volp" id="ivolp">
+                            <label for="ivolp">Vôlei de praia</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="natp" id="inatp">
+                            <label for="inatp">Natação em piscina</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="natm" id="inatm">
+                            <label for="inatm">Natação em mar aberto</label>
+                        </div>
+                    </fieldset>
+                </fieldset><br>
+                <fieldset>
+                    <legend>Comentário</legend>
+                    <div>
+                        <label for="imsg">Mensagem:</label><br>
+                        <textarea name="msg" id="imsg" cols="60" rows="10"></textarea>
+                    </div>
+                </fieldset><br>
+                <div>
+                    <input type="submit" value="Enviar" id="buton">
+                    <input type="reset" value="Limpar" id="buton">
+                </div>
         </form>
     </main>
 </body>
