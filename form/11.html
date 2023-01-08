@@ -9,7 +9,7 @@
 </head>
 <body>
     <main>
-        <form action="cadastro.php" method="post">
+        <form action="cadastro.php" method="post" autocomplete="on">
                 <fieldset id="fieldstyle">
                     <legend id="title">Cadastro Geral</legend>
                     <fieldset id="div01">
@@ -17,15 +17,15 @@
                         <div>
                             <label for="inome">Nome completo:</label>
                             <br>
-                            <input type="text" name="nome" id="inome">
+                            <input type="text" name="nome" id="inome" required autocomplete="name" size="25">
                         </div>
                         <br>
                         <div>
                             <label for="iprof">Profissão:</label>
                             <br>
-                            <input type="text" name="prof" id="iprof" list="lstprof">
+                            <input type="text" name="prof" id="iprof" list="lstprof" placeholder="Sua profissão" required size="25">
                         </div>
-                        <datalist id="lstprof"> 
+                        <datalist id="lstprof">
                             <option>Administrador</option>
                             <option>Bombeiro</option>
                             <option>Cozinheiro</option>
@@ -37,18 +37,18 @@
                         <div>
                             <label for="irua">Rua:</label>
                             <br>
-                            <input type="text" name="rua" id="irua">
+                            <input type="text" name="rua" id="irua" required autocomplete="street-address" size="25">
                         </div>
                         <br>
                         <div>
                             <label for="icid">Cidade:</label>
                             <br>
-                            <input type="text" name="cid" id="icid">
+                            <input type="text" name="cid" id="icid" required autocomplete="address-level2" size="25">
                         </div>
                     </fieldset>
-                    <fieldset id="field2">
+                    <fieldset id="field1">
                         <legend>Faixa etária</legend>
-                            <div id="div03">
+                            <div>
                                 <div>
                                     <input type="radio" name="ate20" id="iate20">
                                     <label for="iate20">até 20 anos</label>
@@ -62,7 +62,7 @@
                                     <label for="imas30">mais de 30 anos até 40 anos</label>
                                 </div>
                             </div>
-                            <div id="div04">
+                            <div>
                                 <div>
                                     <input type="radio" name="mais40" id="imas40">
                                     <label for="imas40">mais de 40 anos até 50 anos</label>
@@ -77,7 +77,7 @@
                                 </div>
                             </div>
                     </fieldset>
-                    <fieldset id="div05">
+                    <fieldset id="div03">
                         <legend>Esportes que pratica</legend>
                         <div>
                             <input type="checkbox" name="futc" id="ifutc">
@@ -109,16 +109,16 @@
                         </div>
                     </fieldset>
                 </fieldset><br>
-                <fieldset>
+                <fieldset id="msg">
                     <legend>Comentário</legend>
                     <div>
                         <label for="imsg">Mensagem:</label><br>
-                        <textarea name="msg" id="imsg" cols="60" rows="10"></textarea>
+                        <textarea name="msg" id="imsg" cols="45" rows="10"></textarea>
                     </div>
                 </fieldset><br>
                 <div>
-                    <input type="submit" value="Enviar" id="buton">
-                    <input type="reset" value="Limpar" id="buton">
+                    <input type="submit" value="Enviar" class="botao">
+                    <input type="reset" value="Limpar" class="botao">
                 </div>
         </form>
     </main>

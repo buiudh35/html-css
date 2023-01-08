@@ -9,16 +9,18 @@ html {
 }
 
 body {
-    width: 900px;
+    width: 680px;
     margin: auto;
-    background-color: rgba(0, 128, 0, 0.3);
     border: 1px solid green;
+    background: rgba(0, 128, 0, 0.3) url(../midia/img/online-form-icon.png) left top no-repeat ;
+    background-size: 70px;
+    
 }
 
 main {
     margin: auto;
-    width: 800px;
-    padding: 30px 15px 30px 30px;
+    width: 594px;
+    padding: 40px 5px 30px 55px;
 }
 
 fieldset {
@@ -41,26 +43,54 @@ legend {
 
 #div01 {
     display: inline;
-    width: 353px;
+    width: 250px;
     margin-right: 15px;
     margin-bottom: 15px;
+    background: url(../midia/img/dados-pessoais.png) right bottom no-repeat ;
+    background-size: 90px;
+}
+
+#div01 input::placeholder {
+    color: black;
 }
 
 #div02 {
     display: inline;
-    width: 353px;
+    width: 250px;
     margin-bottom: 15px;
+    background: url(../midia/img/45966176_1738261966280282_8228509576463384576_n.png) right bottom no-repeat;
+    background-size: 154px;
 }
 
-#field2 {
+#div03 {
+    width: 542px;
+    margin-bottom: 15px;
+    background: url(../midia/img/esporte.png) right bottom no-repeat;
+    background-size: 300px;
+}
+
+#field1 {
     display: inline;
-    width: 748px;
+    width: 542px;
     columns: 2;
     margin-bottom: 15px;
+    background: url(../midia/img/age-range.png) right bottom no-repeat;
+    background-size: 150px;
 }
 
-#buton{
+#msg {
+    background: url(../midia/img/pngegg.png) right center no-repeat;
+    background-size: 220px;
+}
+
+.botao{
+    padding: 2px 8px;
+}
+
+input {
     border: 1px solid green;
+    padding: 2px;
+    font-size: 14px;
 }
 
 form {
